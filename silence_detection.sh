@@ -10,7 +10,7 @@ run_script() {
     touch /usr/share/zabbix/sp/secure/.silence_detected
 }
 
-log_dir="logs"
+log_dir="/home/spcast/SPCast/silence/logs"
 silence_log="$log_dir/silence_detection_$(date +%Y%m%d%H%M%S).log"
 max_log_age=172800 # 48 hours in seconds
 

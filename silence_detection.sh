@@ -21,7 +21,7 @@ rotate_logs() {
 }
 
 # Run FFmpeg for 15 seconds and analyze silence
-silence_cmd="ffmpeg -nostdin -i http://localhost/stream -af silencedetect=n=-50dB:d=15 -f mp3 -y /dev/null"
+silence_cmd="ffmpeg -nostdin -i http://localhost:8110/stream -af silencedetect=n=-50dB:d=15 -f mp3 -y /dev/null"
 $silence_cmd >"$silence_log" 2>&1 &
 
 # Sleep for 15 seconds
